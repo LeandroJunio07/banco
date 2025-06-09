@@ -1,0 +1,164 @@
+:root {
+    --primary-color: #1a1a2e;
+    --accent-color: #4cc9f0;
+    --gradient: linear-gradient(135deg, #4cc9f0, #4895ef, #4361ee);
+    --text-light: #f8f9fa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: var(--primary-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Adicionando a imagem de fundo */
+    background-image: url('https://t4.ftcdn.net/jpg/09/64/03/41/240_F_964034189_PfF4GQCYpmdWmUvjNUu1blXSd3FHkrLY.jpg'); /* Substitua pelo caminho da sua imagem */
+    background-size: cover; /* Faz a imagem cobrir todo o fundo */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita a duplicação */
+    background-attachment: fixed; /* Opcional: faz a imagem ficar fixa durante o scroll */
+}
+
+/* Adicionando uma camada escura semi-transparente para melhorar a legibilidade */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(26, 26, 46, 0.7); /* Cor primária com transparência */
+    z-index: -1; /* Coloca atrás do conteúdo */
+}
+
+.login-container {
+    width: 100%;
+    max-width: 420px;
+    padding: 0 20px;
+}
+
+.login-card {
+    background: var(--gradient);
+    border-radius: 16px;
+    padding: 40px 35px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    backdrop-filter: blur(5px); /* Adiciona um leve desfoque para melhor contraste */
+}
+
+.logo-login {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-login i {
+    font-size: 48px;
+    color: var(--text-light);
+    margin-bottom: 15px;
+}
+
+.logo-login h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-light);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 8px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-size: 15px;
+    transition: all 0.3s;
+}
+
+.form-group input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(76, 201, 240, 0.5);
+}
+
+.btn-login {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s;
+}
+
+.btn-login:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.login-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.login-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.login-links a:hover {
+    text-decoration: underline;
+    opacity: 0.9;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .login-card {
+        padding: 35px 25px;
+    }
+    
+    .logo-login i {
+        font-size: 42px;
+    }
+    
+    .logo-login h1 {
+        font-size: 24px;
+    }
+    
+    .form-group input {
+        padding: 12px 14px;
+    }
+    
+    .btn-login {
+        padding: 14px;
+    }
+}
