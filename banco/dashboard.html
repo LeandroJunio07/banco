@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zentry - Área Logada</title>
+    <link rel="stylesheet" href="css/bank.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Menu Lateral -->
+        <aside class="sidebar">
+            <div class="logo-container">
+                <div class="logo-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h1>Zentry</h1>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li data-section="inicio" class="active"><a href="#"><i class="fas fa-home"></i> <span>Início</span></a></li>
+                    <li data-section="pix"><a href="#"><i class="fas fa-bolt"></i> <span>PIX</span></a></li>
+                    <li data-section="cartoes"><a href="#"><i class="fas fa-credit-card"></i> <span>Cartões</span></a></li>
+                    <li data-section="investimentos"><a href="#"><i class="fas fa-chart-line"></i> <span>Investimentos</span></a></li>
+                    <li data-section="pagamentos"><a href="#"><i class="fas fa-barcode"></i> <span>Pagamentos</span></a></li>
+                    <li data-section="emprestimos"><a href="#"><i class="fas fa-hand-holding-usd"></i> <span>Empréstimos</span></a></li>
+                    <li data-section="recargas"><a href="#"><i class="fas fa-mobile-alt"></i> <span>Recargas</span></a></li>
+                    <li data-section="conta"><a href="#"><i class="fas fa-user"></i> <span>Minha Conta</span></a></li>
+                </ul>
+            </nav>
+            
+            <div class="user-profile">
+                <div class="profile-pic">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="profile-info">
+                    <span class="user-name">Leandro Júnio</span>
+                    <span class="user-account">Conta: 12345-6</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Conteúdo Principal -->
+        <main class="main-content">
+            <!-- Cabeçalho -->
+            <header class="main-header">
+                <div class="search-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Buscar no Zentry">
+                </div>
+                
+                <div class="header-actions">
+                    <button class="btn-notification">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+                    <button class="btn-support">
+                        <i class="fas fa-headset"></i>
+                        <span>Suporte</span>
+                    </button>
+                    <button class="btn-logout">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Sair</span>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Seção de Saldo -->
+            <section id="inicio-section" class="content-section">
+                <div class="balance-section">
+                    <div class="balance-card">
+                        <div class="balance-info">
+                            <span class="balance-label">Saldo disponível</span>
+                            <h2 class="balance-amount">R$ 8.742,56</h2>
+                            <span class="balance-details">Limite disponível: R$ 2.500,00</span>
+                        </div>
+                        
+                        <div class="balance-actions">
+                            <button class="btn-action pix-btn">
+                                <i class="fas fa-bolt"></i>
+                                <span>PIX</span>
+                            </button>
+                            <button class="btn-action transfer-btn">
+                                <i class="fas fa-exchange-alt"></i>
+                                <span>Transferir</span>
+                            </button>
+                            <button class="btn-action pay-btn">
+                                <i class="fas fa-barcode"></i>
+                                <span>Pagar</span>
+                            </button>
+                            <button class="btn-action deposit-btn">
+                                <i class="fas fa-money-bill-wave"></i>
+                                <span>Depositar</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="credit-card">
+                        <div class="card-info">
+                            <span class="card-label">Cartão de crédito</span>
+                            <h3 class="card-limit">Fatura atual: R$ 1.245,90</h3>
+                            <span class="card-number">•••• •••• •••• 7890</span>
+                            <button class="btn-pay-invoice">Pagar fatura</button>
+                        </div>
+                        <div class="card-image">
+                            <div class="card-visual"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Seção de Atalhos -->
+                <section class="shortcuts-section">
+                    <h2 class="section-title">Atalhos</h2>
+                    <div class="shortcuts-grid">
+                        <div class="shortcut-item" data-action="pix">
+                            <div class="shortcut-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <span>PIX</span>
+                        </div>
+                        <div class="shortcut-item" data-action="recarga">
+                            <div class="shortcut-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <span>Recarga</span>
+                        </div>
+                        <div class="shortcut-item" data-action="emprestimo">
+                            <div class="shortcut-icon">
+                                <i class="fas fa-hand-holding-usd"></i>
+                            </div>
+                            <span>Empréstimo</span>
+                        </div>
+                        <div class="shortcut-item" data-action="investir">
+                            <div class="shortcut-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <span>Investir</span>
+                        </div>
+                        <div class="shortcut-item" data-action="seguros">
+                            <div class="shortcut-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <span>Seguros</span>
+                        </div>
+                        <div class="shortcut-item" data-action="mais">
+                            <div class="shortcut-icon">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                            <span>Mais</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Seção de Transações -->
+                <section class="transactions-section">
+                    <div class="section-header">
+                        <h2 class="section-title">Suas transações</h2>
+                        <button class="btn-filter">
+                            <i class="fas fa-filter"></i>
+                            <span>Filtrar</span>
+                        </button>
+                    </div>
+                    
+                    <div class="transactions-list">
+                        <!-- Transações serão adicionadas dinamicamente via JS -->
+                    </div>
+                    
+                    <button class="btn-show-more">
+                        Ver todas as transações
+                    </button>
+                </section>
+
+                <!-- Seção de Investimentos -->
+                <section class="investments-section">
+                    <h2 class="section-title">Investimentos</h2>
+                    <div class="investments-card">
+                        <div class="investments-info">
+                            <h3>Comece a investir</h3>
+                            <p>Rendimento de até 110% do CDI</p>
+                            <button class="btn-invest">Investir agora</button>
+                        </div>
+                        <div class="investments-chart">
+                            <div class="chart-placeholder"></div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <!-- Seção PIX -->
+            <section id="pix-section" class="content-section" style="display:none;">
+                <div class="pix-container">
+                    <h2 class="section-main-title">Área PIX</h2>
+                    
+                    <div class="pix-actions">
+                        <div class="pix-action" data-type="transferir">
+                            <div class="pix-icon">
+                                <i class="fas fa-exchange-alt"></i>
+                            </div>
+                            <span>Transferir</span>
+                        </div>
+                        <div class="pix-action" data-type="receber">
+                            <div class="pix-icon">
+                                <i class="fas fa-hand-holding-usd"></i>
+                            </div>
+                            <span>Receber</span>
+                        </div>
+                        <div class="pix-action" data-type="cobrar">
+                            <div class="pix-icon">
+                                <i class="fas fa-file-invoice-dollar"></i>
+                            </div>
+                            <span>Cobrar</span>
+                        </div>
+                        <div class="pix-action" data-type="chaves">
+                            <div class="pix-icon">
+                                <i class="fas fa-key"></i>
+                            </div>
+                            <span>Minhas Chaves</span>
+                        </div>
+                    </div>
+                    
+                    <div class="pix-transfer-form">
+                        <h3>Transferência via PIX</h3>
+                        <form id="pixForm">
+                            <div class="form-group">
+                                <label for="pixValue">Valor</label>
+                                <input type="text" id="pixValue" placeholder="R$ 0,00">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="pixKey">Chave PIX</label>
+                                <input type="text" id="pixKey" placeholder="CPF, e-mail, telefone ou chave aleatória">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="pixDescription">Descrição (opcional)</label>
+                                <input type="text" id="pixDescription" placeholder="Ex: Pagamento serviço">
+                            </div>
+                            
+                            <button type="submit" class="btn-confirm">Confirmar transferência</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Seção Cartões -->
+            <section id="cartoes-section" class="content-section" style="display:none;">
+                <div class="cards-container">
+                    <h2 class="section-main-title">Meus Cartões</h2>
+                    
+                    <div class="card-detail metallic-gold">
+                        <div class="card-top">
+                            <span>Zentry</span>
+                            <span>Platinum</span>
+                        </div>
+                        <div class="card-middle">
+                            <span class="card-number">•••• •••• •••• 7890</span>
+                        </div>
+                        <div class="card-bottom">
+                            <div>
+                                <span>Titular</span>
+                                <span>CARLOS SILVA</span>
+                            </div>
+                            <div>
+                                <span>Válido até</span>
+                                <span>05/28</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-actions">
+                        <button class="btn-card-action" data-action="bloquear">
+                            <i class="fas fa-lock"></i>
+                            <span>Bloquear Cartão</span>
+                        </button>
+                        <button class="btn-card-action" data-action="ajustar">
+                            <i class="fas fa-sliders-h"></i>
+                            <span>Ajustar Limite</span>
+                        </button>
+                        <button class="btn-card-action" data-action="virtual">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Cartão Virtual</span>
+                        </button>
+                    </div>
+                    
+                    <div class="invoice-section">
+                        <h3>Fatura Atual</h3>
+                        <div class="invoice-info">
+                            <div>
+                                <span>Total</span>
+                                <strong>R$ 1.245,90</strong>
+                            </div>
+                            <div>
+                                <span>Vencimento</span>
+                                <strong>10/05/2023</strong>
+                            </div>
+                            <button class="btn-pay-full">Pagar Fatura</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Seção Investimentos -->
+            <section id="investimentos-section" class="content-section" style="display:none;">
+                <div class="investments-full-container">
+                    <h2 class="section-main-title">Investimentos</h2>
+                    
+                    <div class="investment-products">
+                        <div class="investment-product">
+                            <div class="product-icon">
+                                <i class="fas fa-piggy-bank"></i>
+                            </div>
+                            <div class="product-info">
+                                <h3>Zentry Guard</h3>
+                                <p>Rendimento de 100% do CDI</p>
+                                <span>Resgate imediato</span>
+                                <button class="btn-invest-product">Investir</button>
+                            </div>
+                        </div>
+                        
+                        <div class="investment-product">
+                            <div class="product-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="product-info">
+                                <h3>Zentry+ CDB</h3>
+                                <p>Rendimento de 110% do CDI</p>
+                                <span>Vencimento em 2 anos</span>
+                                <button class="btn-invest-product">Investir</button>
+                            </div>
+                        </div>
+                        
+                        <div class="investment-product">
+                            <div class="product-icon">
+                                <i class="fas fa-coins"></i>
+                            </div>
+                            <div class="product-info">
+                                <h3>Zentry Tesouro</h3>
+                                <p>Tesouro Direto IPCA+</p>
+                                <span>Longo prazo</span>
+                                <button class="btn-invest-product">Investir</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Seção Pagamentos -->
+            <section id="pagamentos-section" class="content-section" style="display:none;">
+                <div class="payments-container">
+                    <h2 class="section-main-title">Pagamentos</h2>
+                    
+                    <div class="payment-methods">
+                        <div class="payment-method active" data-method="boleto">
+                            <i class="fas fa-barcode"></i>
+                            <span>Boleto</span>
+                        </div>
+                        <div class="payment-method" data-method="conta">
+                            <i class="fas fa-building"></i>
+                            <span>Conta</span>
+                        </div>
+                        <div class="payment-method" data-method="imposto">
+                            <i class="fas fa-file-invoice-dollar"></i>
+                            <span>Impostos</span>
+                        </div>
+                    </div>
+                    
+                    <form id="paymentForm" class="active-form">
+                        <div class="form-group">
+                            <label for="paymentCode">Código de barras</label>
+                            <input type="text" id="paymentCode" placeholder="Digite o código do boleto">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="paymentValue">Valor</label>
+                            <input type="text" id="paymentValue" placeholder="R$ 0,00">
+                        </div>
+                        
+                        <button type="submit" class="btn-confirm-payment">Confirmar Pagamento</button>
+                    </form>
+                </div>
+            </section>
+            
+            <!-- Seção Empréstimos -->
+            <section id="emprestimos-section" class="content-section" style="display:none;">
+                <div class="loan-full-container">
+                    <h2 class="section-main-title">Empréstimos</h2>
+                    
+                    <div class="loan-offer">
+                        <div class="offer-info">
+                            <h3>Empréstimo Pessoal</h3>
+                            <p>Valor disponível: <strong>R$ 15.000,00</strong></p>
+                            <p>Taxa a partir de: <strong>1,49% ao mês</strong></p>
+                            <button class="btn-simulate-loan">Simular Empréstimo</button>
+                        </div>
+                        <div class="offer-image">
+                            <i class="fas fa-hand-holding-usd"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="loan-simulation" style="display:none;">
+                        <form id="loanForm">
+                            <div class="form-group">
+                                <label for="loanValue">Valor desejado</label>
+                                <input type="text" id="loanValue" placeholder="R$ 0,00">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="loanInstallments">Parcelas</label>
+                                <select id="loanInstallments">
+                                    <option value="12">12x</option>
+                                    <option value="24">24x</option>
+                                    <option value="36">36x</option>
+                                    <option value="48">48x</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Finalidade</label>
+                                <div class="radio-group">
+                                    <input type="radio" id="purpose1" name="loanPurpose" value="Pessoal" checked>
+                                    <label for="purpose1">Pessoal</label>
+                                </div>
+                                <div class="radio-group">
+                                    <input type="radio" id="purpose2" name="loanPurpose" value="Consignado">
+                                    <label for="purpose2">Consignado</label>
+                                </div>
+                                <div class="radio-group">
+                                    <input type="radio" id="purpose3" name="loanPurpose" value="Veículo">
+                                    <label for="purpose3">Veículo</label>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="btn-confirm-loan">Simular</button>
+                        </form>
+                    </div>
+                    
+                    <div class="loan-result" style="display:none;">
+                        <h3>Resultado da Simulação</h3>
+                        <div class="result-details">
+                            <div>
+                                <span>Valor:</span>
+                                <strong id="simulatedValue">R$ 0,00</strong>
+                            </div>
+                            <div>
+                                <span>Parcelas:</span>
+                                <strong id="simulatedInstallments">0x</strong>
+                            </div>
+                            <div>
+                                <span>Taxa:</span>
+                                <strong id="simulatedRate">0%</strong>
+                            </div>
+                            <div>
+                                <span>Valor da parcela:</span>
+                                <strong id="simulatedMonthly">R$ 0,00</strong>
+                            </div>
+                            <div>
+                                <span>Total a pagar:</span>
+                                <strong id="simulatedTotal">R$ 0,00</strong>
+                            </div>
+                        </div>
+                        <button class="btn-request-loan">Solicitar Empréstimo</button>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Seção Recargas -->
+            <section id="recargas-section" class="content-section" style="display:none;">
+                <div class="recharge-container">
+                    <h2 class="section-main-title">Recargas</h2>
+                    
+                    <div class="recharge-operators">
+                        <div class="operator" data-operator="vivo">
+                            <img src="https://i.pinimg.com/736x/fd/bd/9f/fdbd9f61b5c3d7735faabcb3cd84c9f7.jpg" alt="Vivo">
+                            <span>Vivo</span>
+                        </div>
+                        <div class="operator" data-operator="tim">
+                            <img src="https://www.tecstudio.com.br/wp-content/uploads/2016/01/29202329429710.jpg" alt="TIM">
+                            <span>TIM</span>
+                        </div>
+                        <div class="operator" data-operator="claro">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Claro.svg/1200px-Claro.svg.png" alt="Claro">
+                            <span>Claro</span>
+                        </div>
+                        <div class="operator" data-operator="oi">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Oi_logo_2022.png" alt="Oi">
+                            <span>Oi</span>
+                        </div>
+                    </div>
+                    
+                    <form id="rechargeForm">
+                        <div class="form-group">
+                            <label for="rechargePhone">Número do celular</label>
+                            <input type="tel" id="rechargePhone" placeholder="(XX) XXXXX-XXXX">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="rechargeValue">Valor</label>
+                            <div class="value-options">
+                                <button type="button" class="value-option" data-value="10">R$ 10</button>
+                                <button type="button" class="value-option" data-value="20">R$ 20</button>
+                                <button type="button" class="value-option" data-value="30">R$ 30</button>
+                                <button type="button" class="value-option" data-value="50">R$ 50</button>
+                                <button type="button" class="value-option" data-value="100">R$ 100</button>
+                                <button type="button" class="value-option" data-value="outro">Outro</button>
+                            </div>
+                            <input type="text" id="rechargeValue" placeholder="R$ 0,00" style="display:none;">
+                        </div>
+                        
+                        <button type="submit" class="btn-confirm-recharge">Confirmar Recarga</button>
+                    </form>
+                </div>
+            </section>
+            
+            <!-- Seção Minha Conta -->
+            <section id="conta-section" class="content-section" style="display:none;">
+                <div class="account-container">
+                    <h2 class="section-main-title">Minha Conta</h2>
+                    
+                    <div class="account-info">
+                        <div class="info-item">
+                            <span>Nome completo</span>
+                            <strong>Leandro Júnio Rodrigues Fernandes</strong>
+                        </div>
+                        <div class="info-item">
+                            <span>CPF</span>
+                            <strong>123.456.789-00</strong>
+                        </div>
+                        <div class="info-item">
+                            <span>Data de nascimento</span>
+                            <strong>01/06/2006</strong>
+                        </div>
+                        <div class="info-item">
+                            <span>E-mail</span>
+                            <strong>leandrojunio484@gmail.com</strong>
+                        </div>
+                        <div class="info-item">
+                            <span>Telefone</span>
+                            <strong>(61) 99679-4160</strong>
+                        </div>
+                    </div>
+                    
+                    <div class="account-actions">
+                        <button class="btn-account-action">
+                            <i class="fas fa-lock"></i>
+                            <span>Alterar Senha</span>
+                        </button>
+                        <button class="btn-account-action">
+                            <i class="fas fa-envelope"></i>
+                            <span>Alterar E-mail</span>
+                        </button>
+                        <button class="btn-account-action">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>Alterar Telefone</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Rodapé -->
+            <footer class="main-footer">
+                <div class="footer-section">
+                    <h3>Zentry</h3>
+                    <ul>
+                        <li><a href="#">Sobre nós</a></li>
+                        <li><a href="#">Carreiras</a></li>
+                        <li><a href="#">Imprensa</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Produtos</h3>
+                    <ul>
+                        <li><a href="#">Conta digital</a></li>
+                        <li><a href="#">Cartão de crédito</a></li>
+                        <li><a href="#">Investimentos</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Fale conosco</h3>
+                    <ul>
+                        <li><a href="#">Ajuda</a></li>
+                        <li><a href="#">0800 123 4567</a></li>
+                    </ul>
+                </div>
+            </footer>
+        </main>
+
+        <!-- Modais -->
+        <div class="modal" id="transferModal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Transferência</h2>
+                <form id="transferForm">
+                    <div class="form-group">
+                        <label for="transferValue">Valor</label>
+                        <input type="text" id="transferValue" placeholder="R$ 0,00">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="transferTo">Para quem</label>
+                        <input type="text" id="transferTo" placeholder="CPF, e-mail ou telefone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="transferDescription">Descrição (opcional)</label>
+                        <input type="text" id="transferDescription" placeholder="Ex: Pagamento aluguel">
+                    </div>
+                    
+                    <button type="submit" class="btn-confirm-transfer">Confirmar transferência</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="modal" id="depositModal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Depósito</h2>
+                <form id="depositForm">
+                    <div class="form-group">
+                        <label for="depositValue">Valor</label>
+                        <input type="text" id="depositValue" placeholder="R$ 0,00">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Tipo de depósito</label>
+                        <div class="radio-group">
+                            <input type="radio" id="depositType1" name="depositType" value="DOC" checked>
+                            <label for="depositType1">DOC</label>
+                        </div>
+                        <div class="radio-group">
+                            <input type="radio" id="depositType2" name="depositType" value="TED">
+                            <label for="depositType2">TED</label>
+                        </div>
+                        <div class="radio-group">
+                            <input type="radio" id="depositType3" name="depositType" value="Boleto">
+                            <label for="depositType3">Boleto</label>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn-confirm-deposit">Confirmar depósito</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="modal" id="supportModal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Suporte</h2>
+                <form id="supportForm">
+                    <div class="form-group">
+                        <label for="supportSubject">Assunto</label>
+                        <input type="text" id="supportSubject" placeholder="Qual é o assunto?">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="supportMessage">Mensagem</label>
+                        <textarea id="supportMessage" placeholder="Descreva seu problema ou dúvida"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-confirm-support">Enviar mensagem</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="modal" id="invoiceModal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Pagamento de Fatura</h2>
+                <div class="invoice-details">
+                    <div class="detail-item">
+                        <span>Valor total:</span>
+                        <strong>R$ 1.245,90</strong>
+                    </div>
+                    <div class="detail-item">
+                        <span>Vencimento:</span>
+                        <strong>10/05/2023</strong>
+                    </div>
+                    <div class="detail-item">
+                        <span>Cartão:</span>
+                        <strong>•••• •••• •••• 7890</strong>
+                    </div>
+                </div>
+                
+                <form id="invoiceForm">
+                    <div class="form-group">
+                        <label for="invoiceValue">Valor a pagar</label>
+                        <input type="text" id="invoiceValue" placeholder="R$ 1.245,90" value="R$ 1.245,90">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Conta de débito</label>
+                        <select id="invoiceAccount">
+                            <option value="main">Conta Principal (Saldo: R$ 8.742,56)</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="btn-confirm-invoice">Confirmar Pagamento</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Modal de Comprovante -->
+        <div class="modal" id="receiptModal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Transação realizada com sucesso!</h2>
+                <div class="receipt-container">
+                    <div class="receipt-header">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Comprovante de Transação</h3>
+                    </div>
+                    <div class="receipt-body">
+                        <div class="receipt-item">
+                            <span>Data/Hora:</span>
+                            <strong id="receipt-date"></strong>
+                        </div>
+                        <div class="receipt-item">
+                            <span>Tipo:</span>
+                            <strong id="receipt-type"></strong>
+                        </div>
+                        <div class="receipt-item">
+                            <span>Valor:</span>
+                            <strong id="receipt-amount"></strong>
+                        </div>
+                        <div class="receipt-item">
+                            <span>Destinatário:</span>
+                            <strong id="receipt-recipient"></strong>
+                        </div>
+                        <div class="receipt-item">
+                            <span>Descrição:</span>
+                            <strong id="receipt-description"></strong>
+                        </div>
+                        <div class="receipt-item">
+                            <span>Código:</span>
+                            <strong id="receipt-code">#<span id="receipt-code-number"></span></strong>
+                        </div>
+                    </div>
+                    <div class="receipt-footer">
+                        <button class="btn-download-receipt">
+                            <i class="fas fa-download"></i> Baixar Comprovante
+                        </button>
+                        <button class="btn-share-receipt">
+                            <i class="fas fa-share-alt"></i> Compartilhar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bank.js"></script>
+</body>
+</html>
